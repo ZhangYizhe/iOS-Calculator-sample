@@ -171,20 +171,10 @@ class ViewController: UIViewController {
                 
             }
             
-            
-            
-            
-            
+
         }
-        
-        
+
         Printresults(flag:firstNum)
-        
-        
-        
-        
-        
-        
         
     }
     
@@ -240,11 +230,7 @@ class ViewController: UIViewController {
                 resultNum = resultNum * firstNum
                 
             }
-            
-            
-            
-            
-            
+
         case 102:
             
             if resultNum == 0 {
@@ -252,16 +238,11 @@ class ViewController: UIViewController {
             }else{
                 resultNum = resultNum - firstNum
             }
-            
-            
-            
-            
+
         case 103:
             
             resultNum = resultNum + firstNum
-            
-            
-            
+
             
         default:
             break
@@ -376,13 +357,25 @@ class ViewController: UIViewController {
     func Printresults(flag:Double) {
         
         
-        if (String(flag).characters.count) < 15 {
+       let Number_of_bits =  String(flag).characters.count -  String(Int(flag)).characters.count
+        
+
+        
+        
+        if (String(format: "%.6f", flag).characters.count) < 21 {
             
             if flag - Double(Int(flag)) == 0{
                 numberout.text = String(Int(flag))
                 
             }else{
-                numberout.text = String(flag)
+                
+                if Number_of_bits <= 6 {
+                   numberout.text = String(flag)
+                }else{
+                    numberout.text = String(format: "%.6f", flag)
+                }
+                
+
             }
             
             numbererror.text = ""
@@ -392,10 +385,7 @@ class ViewController: UIViewController {
             numbererror.text = "数字过大!"
             
         }
-        
-        
-        
-        
+
     }
     
     
