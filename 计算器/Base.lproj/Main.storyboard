@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="计算器" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lny-Pw-qim">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="isI-hd-00w">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldr-rm-UAL" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.74354092776547365" green="0.74884247554644978" blue="0.76474711888937774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="AC"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clearedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ma-Bi-rVw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPc-HD-hu2" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.74354092776547365" green="0.74884247554644978" blue="0.76474711888937774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="+/-"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moreBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0A-jR-8mo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjL-MN-UGv" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.74354092776547365" green="0.74884247554644978" blue="0.76474711888937774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="%"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moreBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7i-e0-wwl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKz-ke-KbM" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.97701185940000002" green="0.54674589630000003" blue="0.066187672320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="49"/>
+                                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="÷"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLY-Yg-C7k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MjL-MN-UGv" firstAttribute="height" secondItem="isI-hd-00w" secondAttribute="height" id="3Os-Bg-sbp"/>
+                                            <constraint firstItem="ldr-rm-UAL" firstAttribute="height" secondItem="isI-hd-00w" secondAttribute="height" id="FKz-2z-ChY"/>
+                                            <constraint firstItem="PKz-ke-KbM" firstAttribute="height" secondItem="isI-hd-00w" secondAttribute="height" id="heH-fT-jDe"/>
+                                            <constraint firstItem="OPc-HD-hu2" firstAttribute="height" secondItem="isI-hd-00w" secondAttribute="height" id="jC1-20-ahp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5hZ-vc-Rai">
+                                        <rect key="frame" x="0.0" y="93.5" width="375" height="93.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHY-LY-3WD" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="7"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCN-m0-gZE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77L-6h-oue" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="8"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ND-vK-ur2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-a8-pBf" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="9"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEo-7p-qH0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUD-VT-nv1" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.97701185941696167" green="0.5467458963394165" blue="0.066187672317028046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="49"/>
+                                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="×"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4M-q0-WSB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="77L-6h-oue" firstAttribute="height" secondItem="5hZ-vc-Rai" secondAttribute="height" id="J8M-28-LVe"/>
+                                            <constraint firstItem="TZJ-a8-pBf" firstAttribute="height" secondItem="5hZ-vc-Rai" secondAttribute="height" id="JGm-NS-1m5"/>
+                                            <constraint firstItem="hHY-LY-3WD" firstAttribute="height" secondItem="5hZ-vc-Rai" secondAttribute="height" id="PdG-Wz-OIW"/>
+                                            <constraint firstItem="CUD-VT-nv1" firstAttribute="height" secondItem="5hZ-vc-Rai" secondAttribute="height" id="kAu-Bh-feG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-5q-u5t">
+                                        <rect key="frame" x="0.0" y="187" width="375" height="93"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXm-UR-GJ8" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="93"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="4"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vnw-SG-D9w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paQ-Tm-4d2" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="93"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9D-HT-nAZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-Ab-ccC" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="93"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="6"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UH-c8-sCf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjw-3N-xzi" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="93"/>
+                                                <color key="backgroundColor" red="0.97701185941696167" green="0.5467458963394165" blue="0.066187672317028046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="49"/>
+                                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="-"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0R-EJ-oZ2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="paQ-Tm-4d2" firstAttribute="height" secondItem="JIb-5q-u5t" secondAttribute="height" id="2FZ-Vw-JxE"/>
+                                            <constraint firstItem="Wjw-3N-xzi" firstAttribute="height" secondItem="JIb-5q-u5t" secondAttribute="height" id="bJK-Ls-BeB"/>
+                                            <constraint firstItem="uXm-UR-GJ8" firstAttribute="height" secondItem="JIb-5q-u5t" secondAttribute="height" id="drl-hu-p4t"/>
+                                            <constraint firstItem="7UM-Ab-ccC" firstAttribute="height" secondItem="JIb-5q-u5t" secondAttribute="height" id="jQJ-7z-8E8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6E7-Zm-lpt">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="93.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-Yx-BvA" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="1"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjP-kd-auP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udW-KY-ONh" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkv-mk-FN0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-mF-NuV" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKW-mY-NNT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHH-jA-WAg" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.97701185941696167" green="0.5467458963394165" blue="0.066187672317028046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="49"/>
+                                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="+"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uki-MG-YXf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TDd-mF-NuV" firstAttribute="height" secondItem="6E7-Zm-lpt" secondAttribute="height" id="2FC-ix-jPF"/>
+                                            <constraint firstItem="udW-KY-ONh" firstAttribute="height" secondItem="6E7-Zm-lpt" secondAttribute="height" id="Jlu-KW-q7o"/>
+                                            <constraint firstItem="eHH-jA-WAg" firstAttribute="height" secondItem="6E7-Zm-lpt" secondAttribute="height" id="ey9-cJ-FNz"/>
+                                            <constraint firstItem="aeh-Yx-BvA" firstAttribute="height" secondItem="6E7-Zm-lpt" secondAttribute="height" id="n76-Wm-AFO"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faN-Hk-bEX">
+                                        <rect key="frame" x="0.0" y="373.5" width="375" height="93.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScI-b9-YEg" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEV-9U-BXU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-3W-T2O" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="93.5"/>
+                                                <color key="backgroundColor" red="0.81545525789260864" green="0.81945449113845825" blue="0.83179754018783569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="."/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="decimalpointBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCT-F0-Gsj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efc-WA-wdP" customClass="MyPreviewButton" customModule="计算器" customModuleProvider="target">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="93.5"/>
+                                                <color key="backgroundColor" red="0.97701185941696167" green="0.5467458963394165" blue="0.066187672317028046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="49"/>
+                                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="="/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLM-sP-fUc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ScI-b9-YEg" firstAttribute="height" secondItem="faN-Hk-bEX" secondAttribute="height" id="1X2-my-3ra"/>
+                                            <constraint firstItem="yCg-3W-T2O" firstAttribute="height" secondItem="faN-Hk-bEX" secondAttribute="height" id="40b-fx-Nz2"/>
+                                            <constraint firstItem="efc-WA-wdP" firstAttribute="height" secondItem="faN-Hk-bEX" secondAttribute="height" id="6xJ-7X-Yah"/>
+                                            <constraint firstItem="yCg-3W-T2O" firstAttribute="width" secondItem="efc-WA-wdP" secondAttribute="width" id="FM2-Nh-v8G"/>
+                                            <constraint firstItem="ScI-b9-YEg" firstAttribute="width" secondItem="faN-Hk-bEX" secondAttribute="width" multiplier="0.5" id="RLb-gj-rP7"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-PT-YkM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-gy-hYE">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-gb-xzp">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="100"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="T3x-gb-xzp" firstAttribute="leading" secondItem="jmd-PT-YkM" secondAttribute="leading" id="Onl-f1-1zi"/>
+                                    <constraint firstAttribute="trailing" secondItem="NMD-gy-hYE" secondAttribute="trailing" id="cvn-AU-ag8"/>
+                                    <constraint firstAttribute="trailing" secondItem="T3x-gb-xzp" secondAttribute="trailing" id="mgw-eW-M4L"/>
+                                    <constraint firstItem="T3x-gb-xzp" firstAttribute="height" secondItem="jmd-PT-YkM" secondAttribute="height" multiplier="0.5" id="nfl-eH-f5P"/>
+                                    <constraint firstItem="NMD-gy-hYE" firstAttribute="leading" secondItem="jmd-PT-YkM" secondAttribute="leading" id="r16-y8-eLJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="T3x-gb-xzp" secondAttribute="bottom" id="umG-WZ-dsq"/>
+                                    <constraint firstItem="NMD-gy-hYE" firstAttribute="top" secondItem="jmd-PT-YkM" secondAttribute="top" constant="40" id="wLW-Nf-wwn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lny-Pw-qim" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2aA-7q-0dw"/>
+                            <constraint firstItem="jmd-PT-YkM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6gz-jC-SDS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lny-Pw-qim" secondAttribute="bottom" id="Et8-ge-m22"/>
+                            <constraint firstItem="lny-Pw-qim" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQF-Tq-9eR"/>
+                            <constraint firstItem="jmd-PT-YkM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="NE4-FG-D1O"/>
+                            <constraint firstItem="jmd-PT-YkM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVa-wf-QFx"/>
+                            <constraint firstAttribute="trailing" secondItem="jmd-PT-YkM" secondAttribute="trailing" id="XN9-AO-4eD"/>
+                            <constraint firstAttribute="trailing" secondItem="lny-Pw-qim" secondAttribute="trailing" id="k16-VT-mYE"/>
+                            <constraint firstItem="lny-Pw-qim" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="x6s-oY-5Q6"/>
+                            <constraint firstItem="jmd-PT-YkM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y3D-Ee-abt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ACBtn" destination="ldr-rm-UAL" id="n2D-Nv-jfZ"/>
+                        <outlet property="exceptBtn" destination="PKz-ke-KbM" id="qRa-st-ifg"/>
+                        <outlet property="lessBtn" destination="Wjw-3N-xzi" id="7eb-VA-CgX"/>
+                        <outlet property="multiplyBtn" destination="CUD-VT-nv1" id="LcW-jY-K98"/>
+                        <outlet property="numbererror" destination="NMD-gy-hYE" id="A7b-R9-OaY"/>
+                        <outlet property="numberout" destination="T3x-gb-xzp" id="qGd-1c-OJF"/>
+                        <outlet property="plusBtn" destination="eHH-jA-WAg" id="E0t-CO-yYH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
