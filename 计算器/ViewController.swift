@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             
             Operation_process()
             
-            //Operator = 0
+            Operator = 0
             break
             
         default:
@@ -261,7 +261,7 @@ class ViewController: UIViewController {
         
         BtnSound()
         
-        if(ACBtn.title(for: .normal)! == "C"){
+        if(ACBtn.title(for: .normal)! == "C" && Operator != 0){
             
             firstNum = 0
             ACBtn.setTitle("AC", for: .normal)
@@ -280,10 +280,13 @@ class ViewController: UIViewController {
                 plusBtn.boardwidth = 2
                 break
             default:
+            
                 break
             }
             
         }else{
+            
+            ACBtn.setTitle("AC", for: .normal)
             
             firstNum = 0
             resultNum = 0
